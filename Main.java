@@ -21,9 +21,12 @@ public class Main
     public static void main(String[] args)
     {
         Assignment assignment = new Assignment();
-        String assignmentName = assignment.inputAssignmentName();
+        assignment.inputAssignmentName();
         
         StudentMarks studentMarks = new StudentMarks();
-        int[] marks = studentMarks.inputStudentMarks();
+        studentMarks.inputStudentMarks();
+        
+        assignment.printAssignmentName();
+        studentMarks.printStudentMarks();
     }
 }

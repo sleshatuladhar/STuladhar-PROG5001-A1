@@ -9,8 +9,9 @@ import java.util.Scanner;
  */
 public class StudentMarks
 {
-    // instance variables - replace the example below with your own
+    // instance variables
     private int[] marks;
+    private int totalStudents = 30;
 
     /**
      * Constructor for objects of class StudentMarks
@@ -21,13 +22,11 @@ public class StudentMarks
 
     /**
      * Input marks of 30 students
-     *
      */
-    public int[] inputStudentMarks()
+    public void inputStudentMarks()
     {
         Scanner scanner = new Scanner(System.in);
 
-        int totalStudents = 30;
         this.marks = new int[totalStudents];
 
         for (int i = 0; i < totalStudents; i++) {
@@ -46,13 +45,17 @@ public class StudentMarks
             this.marks[i] = mark;
         }
 
+        scanner.close();        
+    }
+    
+    /**
+     * Print student marks
+     */
+    public void printStudentMarks()
+    {
         for (int i = 0; i < totalStudents; i++) {
             int studentId = i + 1;
             System.out.println("Student " + studentId + ": " + this.marks[i]);
         }
-
-        scanner.close();
-        
-        return this.marks;
     }
 }

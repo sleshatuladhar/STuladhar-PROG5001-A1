@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class Assignment
 {
-    // instance variables - replace the example below with your own
+    // instance variables
     private String name;
 
     /**
@@ -23,15 +23,21 @@ public class Assignment
     /**
      * Input assignment name
      */
-    public String inputAssignmentName()
+    public void inputAssignmentName()
     {
         Scanner input = new Scanner(System.in);
 
         System.out.print("Please enter assignment name: ");
         this.name = input.nextLine();
 
-        input.close();
-        
-        return this.name;
+        input.close();        
+    }
+    
+    /**
+     * Print assignment name 
+     */
+    public void printAssignmentName()
+    {
+        System.out.println("Assignment Name: " + this.name);
     }
 }

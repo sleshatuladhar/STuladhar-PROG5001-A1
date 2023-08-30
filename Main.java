@@ -22,5 +22,8 @@ public class Main
     {
         Assignment assignment = new Assignment();
         String assignmentName = assignment.inputAssignmentName();
+        
+        StudentMarks studentMarks = new StudentMarks();
+        int[] marks = studentMarks.inputStudentMarks();
     }
 }

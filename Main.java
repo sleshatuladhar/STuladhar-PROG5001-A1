@@ -30,5 +30,7 @@ public class Main
         studentMarks.printStudentMarks();
         
         studentMarks.getHighestAndLowestMarks();
+        
+        studentMarks.calculateMeanAndStandardDeviation();
     }
 }

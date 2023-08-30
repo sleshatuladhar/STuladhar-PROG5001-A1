@@ -79,4 +79,18 @@ public class StudentMarks
         System.out.println("Highest Mark: " + highestMark);
         System.out.println("Lowest Mark: " + lowestMark);
     }
+    
+    /**
+     * Calculate mean and standard deviation of the marks
+     */
+    public void calculateMeanAndStandardDeviation()
+    {
+        double sum = 0;
+        for (int i=0; i < this.totalStudents; i++) {
+            sum += this.marks[i];
+        }
+        double mean = sum / this.totalStudents;
+
+        System.out.println("Mean: " + mean);
+    }
 }

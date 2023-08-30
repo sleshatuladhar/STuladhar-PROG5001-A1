@@ -27,9 +27,9 @@ public class StudentMarks
     {
         Scanner scanner = new Scanner(System.in);
 
-        this.marks = new int[totalStudents];
+        this.marks = new int[this.totalStudents];
 
-        for (int i = 0; i < totalStudents; i++) {
+        for (int i = 0; i < this.totalStudents; i++) {
             int studentId = i + 1;
             int mark;
 
@@ -53,9 +53,30 @@ public class StudentMarks
      */
     public void printStudentMarks()
     {
-        for (int i = 0; i < totalStudents; i++) {
+        for (int i = 0; i < this.totalStudents; i++) {
             int studentId = i + 1;
             System.out.println("Student " + studentId + ": " + this.marks[i]);
         }
+    }
+    
+    /**
+     * Get highest and lowest student marks
+     */
+    public void getHighestAndLowestMarks()
+    {
+        int highestMark = this.marks[0];
+        int lowestMark = this.marks[0];
+
+        for (int i = 1; i < this.totalStudents; i++) {
+            if (this.marks[i] > highestMark) {
+                highestMark = this.marks[i];
+            }
+            if (this.marks[i] < lowestMark) {
+                lowestMark = this.marks[i];
+            }
+        }
+
+        System.out.println("Highest Mark: " + highestMark);
+        System.out.println("Lowest Mark: " + lowestMark);
     }
 }

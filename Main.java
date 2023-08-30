@@ -28,5 +28,7 @@ public class Main
         
         assignment.printAssignmentName();
         studentMarks.printStudentMarks();
+        
+        studentMarks.getHighestAndLowestMarks();
     }
 }

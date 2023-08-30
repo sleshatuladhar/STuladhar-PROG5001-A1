@@ -86,18 +86,22 @@ public class StudentMarks
     public void calculateMeanAndStandardDeviation()
     {
         double sum = 0;
+        double mean = 0;
+        double sumSquaredDiff = 0;
+        double variance = 0;
+        double standardDeviation = 0;
+        
         for (int i = 0; i < this.totalStudents; i++) {
             sum += this.marks[i];
         }
-        double mean = sum / this.totalStudents;
+        mean = sum / this.totalStudents;
 
-        double sumSquaredDiff = 0;
         for (int i = 0; i < this.totalStudents; i++) {
             double diff = this.marks[i] - mean;
             sumSquaredDiff += diff * diff;
         }
-        double variance = sumSquaredDiff / this.totalStudents;
-        double standardDeviation = Math.sqrt(variance);
+        variance = sumSquaredDiff / this.totalStudents;
+        standardDeviation = Math.sqrt(variance);
 
         System.out.println("Mean: " + mean);
         System.out.println("Standard Deviation: " + standardDeviation);

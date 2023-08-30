@@ -23,7 +23,7 @@ public class Assignment
     /**
      * Input assignment name
      */
-    public void inputAssignmentName()
+    public String inputAssignmentName()
     {
         Scanner input = new Scanner(System.in);
 
@@ -31,5 +31,7 @@ public class Assignment
         this.name = input.nextLine();
 
         input.close();
+        
+        return this.name;
     }
 }
